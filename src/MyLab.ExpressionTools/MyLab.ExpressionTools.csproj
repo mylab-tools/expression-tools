@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Andrey O.</Authors>
+    <Company>Andrey O.Andrey O.</Company>
+    <Copyright>Copyright (c) 2020 Andrey Osintsev &lt;ozzy.ext@gmail.com&gt;</Copyright>
+    <PackageProjectUrl>https://github.com/ozzy-ext-mylab/expression-tools</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ozzy-ext-mylab/expression-tools.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <AssemblyVersion>1.0.0.1412</AssemblyVersion>
+    <FileVersion>1.0.0.1412</FileVersion>
   </PropertyGroup>
 
 </Project>
