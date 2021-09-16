@@ -17,7 +17,8 @@ namespace MyLab.ExpressionTools
             new NewExpressionValueProvider(),
             new MemberInitExpressionValueProvider(),
             new ConvertExpressionValueProvider(),
-            new LambdaExpressionValueProvider()
+            new LambdaExpressionValueProvider(),
+            new ListInitExpressionValueProvider()
         };
 
         /// <summary>

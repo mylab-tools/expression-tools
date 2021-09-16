@@ -6,4 +6,15 @@
 ```
 Ознакомьтесь с последними изменениями в [журнале изменений](/changelog.md).
 
+## Обзор
+
+Предосталвяет метод расширения получения значения для выражений `Expression.GetValue<T>()`.
+
+Пример:
+
+```c#
+Expression expression;
+
+var result = expression.GetValue<object>();
+```
 
