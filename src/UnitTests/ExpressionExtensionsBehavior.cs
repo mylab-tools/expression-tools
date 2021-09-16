@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using MyLab.ExpressionTools;
 using Xunit;
@@ -20,6 +21,21 @@ namespace UnitTests
             //Assert
             Assert.NotNull(val);
             Assert.Equal("foo", val.Value);
+        }
+
+        [Fact]
+        public void ShouldProvideDictionaryInitialization()
+        {
+            //Arrange
+            Expression<Func<Dictionary<string, object>>> expr = () => new Dictionary<string, object> { { "Message", "f" }, { "Message2", "oo" } };
+
+            //Act
+            var val = expr.GetValue<Dictionary<string, object>>();
+
+            //Assert
+            Assert.NotNull(val);
+            Assert.Equal("f", val["Message"]);
+            Assert.Equal("oo", val["Message2"]);
         }
 
         [Fact]
@@ -48,6 +64,9 @@ namespace UnitTests
                 new object[] { (Expression<Func<TestClass>>)( () => new TestClass(GetFoo())) },
                 new object[] { (Expression<Func<TestClass>>)( () => new TestClass("f" + "oo")) },
                 new object[] { (Expression<Func<TestClass>>)( () => new TestClass(() => "foo")) },
+                new object[] { (Expression<Func<TestClass>>)( () => new TestClass(() =>
+                    string.Join("", new Dictionary<string, object> { {"bar", "f" }, { "baz", "oo" } }.Select(kv => kv.Value))
+                    )) },
             };
         }
 
