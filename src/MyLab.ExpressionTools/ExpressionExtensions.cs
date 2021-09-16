@@ -26,7 +26,8 @@ namespace MyLab.ExpressionTools
         /// </summary>
         public static T GetValue<T>(this Expression expression)
         {
-            if (expression == null) throw new ArgumentNullException(nameof(expression));
+            if (expression == null) 
+                throw new ArgumentNullException(nameof(expression));
 
             var valProvider = ValueProviders.FirstOrDefault(p => p.Predicate(expression));
 

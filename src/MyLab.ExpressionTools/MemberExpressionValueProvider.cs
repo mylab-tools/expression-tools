@@ -15,7 +15,7 @@ namespace MyLab.ExpressionTools
         {
             var ma = (MemberExpression)expression;
 
-            var targetObject = ma.Expression.GetValue<object>();
+            var targetObject = ma.Expression?.GetValue<object>();
 
             switch (ma.Member.MemberType)
             {

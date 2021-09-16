@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Text;
 using MyLab.ExpressionTools;
 using Xunit;
 
@@ -53,6 +54,21 @@ namespace UnitTests
             //Assert
             Assert.NotNull(val);
             Assert.Equal(123, val.IntValue);
+        }
+
+        [Fact]
+        public void ShouldSupportStaticMethods()
+        {
+            //Arrange
+            Expression<Func<byte[]>> expr = () => Encoding.UTF8.GetBytes("foo");
+
+            //Act
+            var val = expr.GetValue<byte[]>();
+            var str = Encoding.UTF8.GetString(val);
+
+            //Assert
+            Assert.NotNull(val);
+            Assert.Equal("foo", str);
         }
 
         public static IEnumerable<object[]> GetGetValueTestCases()

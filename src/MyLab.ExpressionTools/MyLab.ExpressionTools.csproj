@@ -9,9 +9,9 @@
     <PackageProjectUrl>https://github.com/ozzy-ext-mylab/expression-tools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ozzy-ext-mylab/expression-tools.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <AssemblyVersion>1.0.1.1609</AssemblyVersion>
-    <FileVersion>1.0.1.1609</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.2.1609</AssemblyVersion>
+    <FileVersion>1.0.2.1609</FileVersion>
+    <Version>1.0.2</Version>
     <PackageIcon>tools.png</PackageIcon>
     <PackageIconUrl />
   </PropertyGroup>
